@@ -6,21 +6,17 @@
         <hr>
         <form action="{{url_for('edit_user',id=dates.ID)}}" method="POST">
             <div class="form-group">
-                <input type="text" name="name" id="name" value="{{datas.NAME}}" required="1" 
-                    class="form-control">
+                <input type="text" name="name" id="name" value="{{datas.NAME}}" required="1" class="form-control">
                 <br>
-                <input type="text" name="age" id="age" value="{{datas.AGE}}" required="1" 
-                    class="form-control"><br>
+                <input type="text" name="age" id="age" value="{{datas.AGE}}" required="1" class="form-control"><br>
                 <input type="text" name="language" id="language" value="{{datas.LANGUAGE}}" required="1"
                     class="form-control">
                 <br>
                 <input type="text" name="preference" id="preference" value="{{datas.PREFERENCE}}" required="1"
                     class="form-control">
                 <br>
-                <!-- <input type="sumbit" value="Update" class="btn btn-primary form-control"> -->
-                <button type="sumbit" value="submit" class="btn btn-primary form-control">
-                    Update </button>
-
+               
+                <input type="submit" value="Update Student" class="btn btn-primary form-control">
 
 
             </div>
