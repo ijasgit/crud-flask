@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>This is index.html file</h1>
+<hr>
+<div style="justify-content: right;text-align:right">
+    <a href="{{url_for('add_user')}}" class="btn btn-success">Add Students</a>
+</div><br>
+<table class="table table-border">
+    <tr>
+        <th>Roll no</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Language</th>
+        <th>preference</th>
+        <th></th>
+        <th></th>
+
+    </tr>
+    <!-- <tr>
+        <td>1</td>
+        <td>ijas</td>
+        <td>23</td>
+        <td>tamil</td>
+        <td>python</td>
+        <td><a href="{{url_for('edit_user')}}" style="width:100px;" class="btn btn-primary">Edit</a></td>
+        <td><a href="#" style="width:100px;" class=" btn btn-danger">Delete</a></td>
+    </tr> -->
+
+
+    {% for row in datas %}
+     <tr>
+        <td>{{loop.index}}</td>
+        <td>{{row.NAME}}</td>
+        <td>{{row.AGE}}</td>
+        <td>{{row.LANGUAGE}}</td>
+        <td>{{row.PREFERENCE}}</td>
+        <td><a href="{{url_for('edit_user',id=row.id)}}" style="width:100px;" class="btn btn-primary">Edit</a></td>
+        <td><a href="#" style="width:100px;" class=" btn btn-danger">Delete</a></td>
+     </tr>
+    {% endfor %}
+
+
+
+
+</table>
+
+{% endblock content %}
